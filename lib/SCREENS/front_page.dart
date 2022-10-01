@@ -9,6 +9,7 @@ class FrontPage extends StatefulWidget {
 }
 
 class _FrontPageState extends State<FrontPage> {
+
   int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
