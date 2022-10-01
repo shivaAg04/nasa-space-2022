@@ -10,9 +10,6 @@ class FrontPage extends StatefulWidget {
 
 class _FrontPageState extends State<FrontPage> {
 
-  //SHA1: A6:1A:16:83:02:6F:7F:DA:27:98:C4:82:21:4F:39:5D:4F:22:B7:4E
-  //SHA-256: CA:05:EC:35:7A:BB:32:27:5A:E4:ED:C2:60:A4:94:1C:20:BC:76:27:73:9B:96:D1:CF:B2:6A:F7:52:44:7A:80
-
   int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
