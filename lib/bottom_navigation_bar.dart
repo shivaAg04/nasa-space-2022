@@ -21,7 +21,7 @@ class _CustomiseBottomNavigationBar
     // AdsControlScreen(),
     const EventsScreen(),
     const feed(),
-    const User(),
+    User(),
   ];
 
   @override
@@ -29,6 +29,7 @@ class _CustomiseBottomNavigationBar
     return Scaffold(
       body: _screenWidget[i],
       bottomNavigationBar: CurvedNavigationBar(
+        index: 1,
         items: const <Widget>[
           Icon(
             Icons.add_sharp,
@@ -49,6 +50,7 @@ class _CustomiseBottomNavigationBar
         animationDuration: const Duration(milliseconds: 300),
         height: 50,
         onTap: (index) {
+          print(index);
           setState(() {
             i = index;
           });
@@ -57,7 +59,8 @@ class _CustomiseBottomNavigationBar
         // animationCurve: Curves.decelerate,
         buttonBackgroundColor: Color.fromARGB(255, 60, 255, 236),
         color: Color.fromARGB(255, 60, 255, 236),
-        backgroundColor: Colors.white,
+        // backgroundColor: Color.fromRGBO(33, 33, 33, 1),
+        backgroundColor: Color.fromRGBO(33, 33, 33, 1),
       ),
     );
   }

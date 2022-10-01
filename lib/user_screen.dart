@@ -5,6 +5,134 @@ class User extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0),
+        child: ListView(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                const Center(
+                  child: CircleAvatar(
+                    radius: 40.0,
+                    backgroundImage: AssetImage('assets/dp.jpeg'),
+                  ),
+                ),
+                Divider(
+                  color: Colors.grey[800],
+                  height: 40.0,
+                ),
+                Align(
+                  alignment: Alignment.topRight,
+                  child: InkWell(
+                    child: Text(
+                      'edit',
+                      style: TextStyle(
+                        color: Colors.grey[400],
+                        fontSize: 14.0,
+                        letterSpacing: 1.0,
+                      ),
+                    ),
+                  ),
+                ),
+                const Text(
+                  'NAME',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+                SizedBox(height: 10.0),
+                const Text(
+                  'SHIVA AGRAHARI',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 60, 255, 236),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28.0,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+                SizedBox(height: 30.0),
+                const Text(
+                  'Institute',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+                SizedBox(height: 10.0),
+                const Text(
+                  'KIET',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 60, 255, 236),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 28.0,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+                SizedBox(height: 30.0),
+                const Text(
+                  'YEAR',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+                SizedBox(height: 10.0),
+                const Text(
+                  'SECOND YEAR',
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 60, 255, 236),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 19.0,
+                    letterSpacing: 2.0,
+                  ),
+                ),
+                SizedBox(height: 30.0),
+                Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                      color: Color.fromARGB(255, 60, 255, 236),
+                    ),
+                    SizedBox(width: 10.0),
+                    FittedBox(
+                      child: Text(
+                        'shiva.2024cs1129@kiet.edu',
+                        style: TextStyle(
+                          color: Colors.grey[400],
+                          fontSize: 15.0,
+                          letterSpacing: 1.0,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(height: 30.0),
+                Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.inbox,
+                      color: Color.fromARGB(255, 60, 255, 236),
+                    ),
+                    SizedBox(width: 10.0),
+                    Text(
+                      'youthoober shiva',
+                      style: TextStyle(
+                        color: Colors.grey[400],
+                        fontSize: 18.0,
+                        letterSpacing: 1.0,
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

@@ -5,6 +5,16 @@ class EventsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 60, 255, 236),
+        title: const Text(
+          "Events",
+          style: TextStyle(color: Colors.black),
+        ),
+        centerTitle: true,
+      ),
+    );
   }
 }

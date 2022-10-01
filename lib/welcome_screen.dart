@@ -7,37 +7,49 @@ class welcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.symmetric(vertical: 100, horizontal: 90),
-          child: Lottie.asset(
-            'assets/lottie/welcome.json',
-            width: 200,
+        body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
             height: 200,
+          ),
+          Lottie.asset(
+            'assets/lottie/welcome.json',
+            width: 300,
+            height: 300,
             fit: BoxFit.fill,
           ),
-        ),
-        Spacer(),
-        const InkWell(
-          child: Text(
-            "REGISTER",
-            style: TextStyle(fontSize: 30, color: Colors.purple),
+          Spacer(),
+          const InkWell(
+            child: Text(
+              "REGISTER",
+              style: TextStyle(
+                color: Colors.purple,
+                fontWeight: FontWeight.bold,
+                fontSize: 28.0,
+                letterSpacing: 2.0,
+              ),
+            ),
           ),
-        ),
-        const SizedBox(
-          height: 30,
-        ),
-        const InkWell(
-          child: Text(
-            "LOGIN",
-            style: TextStyle(fontSize: 30, color: Colors.indigo),
+          const SizedBox(
+            height: 6,
           ),
-        ),
-        SizedBox(
-          height: 40,
-        )
-      ],
+          const InkWell(
+            child: Text(
+              "LOGIN",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 28.0,
+                  letterSpacing: 2.0,
+                  color: Colors.indigo),
+            ),
+          ),
+          SizedBox(
+            height: 40,
+          )
+        ],
+      ),
     ));
   }
 }
