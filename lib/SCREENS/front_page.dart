@@ -13,6 +13,7 @@ class FrontPage extends StatefulWidget {
 }
 
 class _FrontPageState extends State<FrontPage> {
+
   int _currentIndex = 0;
   final List<Widget> _screenWidget = [
     // AdsControlScreen(),
