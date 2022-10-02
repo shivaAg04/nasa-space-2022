@@ -8,14 +8,14 @@ class feed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[900],
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 60, 255, 236),
-        title: const Text(
-          "Home",
-          style: TextStyle(color: Colors.black),
-        ),
-        centerTitle: true,
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: const Color.fromARGB(255, 60, 255, 236),
+      //   title: const Text(
+      //     "Home",
+      //     style: TextStyle(color: Colors.black),
+      //   ),
+      //   centerTitle: true,
+      // ),
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return FeedBlueprint();

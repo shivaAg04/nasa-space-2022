@@ -112,6 +112,7 @@ class _LoginPageState extends State<LoginPage> {
         Text('You are logged in as\n'),
         Text(model.googleAccount!.displayName ?? ''),
         ActionChip(
+v
           label: Text('hy'),
           onPressed: () async {
             String email = model.googleAccount!.email ?? '';
@@ -159,6 +160,7 @@ class _LoginPageState extends State<LoginPage> {
             // }
           },
         ),
+
       ],
     );
   }

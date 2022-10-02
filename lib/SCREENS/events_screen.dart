@@ -8,6 +8,7 @@ class EventsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[900],
       appBar: AppBar(
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.add))],
         backgroundColor: const Color.fromARGB(255, 60, 255, 236),
         title: const Text(
           "Events",
