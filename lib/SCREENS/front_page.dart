@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'package:nasa_space2022/SCREENS/Events/myEvent.dart';
 
-import 'events_screen.dart';
+import 'Events/events_screen.dart';
 import 'feed_screen.dart';
 import 'user_screen.dart';
 
@@ -13,13 +14,12 @@ class FrontPage extends StatefulWidget {
 }
 
 class _FrontPageState extends State<FrontPage> {
-
   int _currentIndex = 0;
   final List<Widget> _screenWidget = [
     // AdsControlScreen(),
     const feed(),
     const EventsScreen(),
-    const EventsScreen(),
+    const MyEvent(),
 
     const User(),
   ];

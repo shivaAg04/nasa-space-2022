@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:lottie/lottie.dart';
+import 'package:nasa_space2022/SCREENS/front_page.dart';
 import 'package:nasa_space2022/SCREENS/login_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:nasa_space2022/SCREENS/welcome_screen.dart';
@@ -198,7 +199,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   'user_type': 'USER',
                 };
                 final uri =
-                Uri.parse('https://1d4b-125-21-249-98.ngrok.io/profile/');
+                    Uri.parse('https://1d4b-125-21-249-98.ngrok.io/profile/');
                 final headers = {'Content-Type': 'application/json'};
                 Map<String, String> body = data;
                 String jsonBody = json.encode(body);
@@ -210,12 +211,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   body: jsonBody,
                   encoding: encoding,
                 );
-                if (response.statusCode  == 201) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => WelcomeScreen()),
-                  );
-                }
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FrontPage()),
+                );
+                // if (response.statusCode == 201) {
+                //   Navigator.push(
+                //     context,
+                //     MaterialPageRoute(builder: (context) => FrontPage()),
+                //   );
+                // }
               })
         ],
       ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nasa_space2022/SCREENS/add_new_event_screen.dart';
+import 'package:nasa_space2022/SCREENS/Events/add_new_event_screen.dart';
+
+import 'add_new_event_screen.dart';
 
 class EventsScreen extends StatelessWidget {
   const EventsScreen({Key? key}) : super(key: key);

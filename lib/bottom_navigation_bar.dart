@@ -1,6 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:nasa_space2022/SCREENS/events_screen.dart';
+import 'package:nasa_space2022/SCREENS/Events/events_screen.dart';
 import 'package:nasa_space2022/SCREENS/feed_screen.dart';
 import 'package:nasa_space2022/SCREENS/user_screen.dart';
 

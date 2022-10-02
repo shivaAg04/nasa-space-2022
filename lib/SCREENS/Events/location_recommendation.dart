@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class AddNewEventScreen extends StatelessWidget {
-  AddNewEventScreen({Key? key}) : super(key: key);
+class LocationRecommendation extends StatelessWidget {
+  LocationRecommendation({Key? key}) : super(key: key);
   TextEditingController titlecontroller = TextEditingController();
   TextEditingController pricecontroller = TextEditingController();
   TextEditingController descriptioncontroller = TextEditingController();
@@ -13,7 +13,7 @@ class AddNewEventScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 60, 255, 236),
         title: const Text(
-          "Add Events",
+          "Find best location",
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
@@ -35,15 +35,17 @@ class AddNewEventScreen extends StatelessWidget {
                   },
                   controller: titlecontroller,
                   decoration: InputDecoration(
-                    labelText: 'Title',
+                    labelText: 'Enter the Latitude',
                     enabledBorder: OutlineInputBorder(
                       borderSide:
                           const BorderSide(width: 3, color: Colors.grey),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide:
-                          const BorderSide(width: 3, color: Colors.orange),
+                      borderSide: const BorderSide(
+                        width: 3,
+                        color: const Color.fromARGB(255, 60, 255, 236),
+                      ),
                       borderRadius: BorderRadius.circular(15),
                     ),
                   ),
@@ -61,15 +63,17 @@ class AddNewEventScreen extends StatelessWidget {
                   },
                   controller: pricecontroller,
                   decoration: InputDecoration(
-                    labelText: 'Price',
+                    labelText: 'Enter the longitude',
                     enabledBorder: OutlineInputBorder(
                       borderSide:
                           const BorderSide(width: 3, color: Colors.grey),
                       borderRadius: BorderRadius.circular(15),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide:
-                          const BorderSide(width: 3, color: Colors.orange),
+                      borderSide: const BorderSide(
+                        width: 3,
+                        color: const Color.fromARGB(255, 60, 255, 236),
+                      ),
                       borderRadius: BorderRadius.circular(15),
                     ),
                   ),
@@ -80,12 +84,19 @@ class AddNewEventScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 16.0),
                   child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          Color.fromARGB(255, 37, 255, 240)),
+                    ),
                     onPressed: () {
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text('Processing Data')),
                       );
                     },
-                    child: const Text('Submit'),
+                    child: const Text(
+                      'Check the better location',
+                      style: TextStyle(color: Colors.black),
+                    ),
                   ),
                 ),
               ],

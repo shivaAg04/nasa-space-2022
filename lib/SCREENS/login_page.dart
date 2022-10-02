@@ -112,7 +112,6 @@ class _LoginPageState extends State<LoginPage> {
         Text('You are logged in as\n'),
         Text(model.googleAccount!.displayName ?? ''),
         ActionChip(
-v
           label: Text('hy'),
           onPressed: () async {
             String email = model.googleAccount!.email ?? '';
@@ -133,34 +132,33 @@ v
             };
             var response = await http.get(uri);
             print(response.statusCode);
-            // if (response.statusCode == 200) {
-            //   Navigator.push(
-            //     context,
-            //     MaterialPageRoute(builder: (context) => WelcomeScreen()),
-            //   );
-            // } else {
-            //   final uri =
-            //       Uri.parse('https://1d4b-125-21-249-98.ngrok.io/login/');
-            //   final headers = {'Content-Type': 'application/json'};
-            //   Map<String, String> body = confidentials;
-            //   String jsonBody = json.encode(body);
-            //   final encoding = Encoding.getByName('utf-8');
-            //
-            //   Response response = await post(
-            //     uri,
-            //     headers: headers,
-            //     body: jsonBody,
-            //     encoding: encoding,
-            //   );
-            //   print(response.statusCode);
-            //   Navigator.push(
-            //     context,
-            //     MaterialPageRoute(builder: (context) => RegisterScreen()),
-            //   );
-            // }
+            if (response.statusCode == 200) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => WelcomeScreen()),
+              );
+            } else {
+              final uri =
+                  Uri.parse('https://1d4b-125-21-249-98.ngrok.io/login/');
+              final headers = {'Content-Type': 'application/json'};
+              Map<String, String> body = confidentials;
+              String jsonBody = json.encode(body);
+              final encoding = Encoding.getByName('utf-8');
+
+              Response response = await post(
+                uri,
+                headers: headers,
+                body: jsonBody,
+                encoding: encoding,
+              );
+              print(response.statusCode);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RegisterScreen()),
+              );
+            }
           },
         ),
-
       ],
     );
   }
