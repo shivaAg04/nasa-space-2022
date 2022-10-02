@@ -18,6 +18,10 @@ class User extends StatelessWidget {
               builder: (context, model, child) {
                 return ListView(
                   children: [
+                    CircleAvatar(
+                      radius: 80,
+                      child: Image.network(imgPath),
+                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -54,8 +58,8 @@ class User extends StatelessWidget {
                           ),
                         ),
                         SizedBox(height: 10.0),
-                        const Text(
-                          'SHIVA AGRAHARI',
+                        Text(
+                          '$namePath',
                           style: TextStyle(
                             color: Color.fromARGB(255, 60, 255, 236),
                             fontWeight: FontWeight.bold,
@@ -91,7 +95,7 @@ class User extends StatelessWidget {
                         ),
                         SizedBox(height: 10.0),
                         const Text(
-                          'SECOND YEAR',
+                          'THIRD YEAR',
                           style: TextStyle(
                             color: Color.fromARGB(255, 60, 255, 236),
                             fontWeight: FontWeight.bold,
@@ -109,7 +113,7 @@ class User extends StatelessWidget {
                             SizedBox(width: 10.0),
                             FittedBox(
                               child: Text(
-                                'shiva.2024cs1129@kiet.edu',
+                                '$emailPath',
                                 style: TextStyle(
                                   color: Colors.grey[400],
                                   fontSize: 15.0,
@@ -122,19 +126,19 @@ class User extends StatelessWidget {
                         SizedBox(height: 30.0),
                         Row(
                           children: <Widget>[
-                            Icon(
-                              Icons.inbox,
-                              color: Color.fromARGB(255, 60, 255, 236),
-                            ),
-                            SizedBox(width: 10.0),
-                            Text(
-                              'youthoober shiva',
-                              style: TextStyle(
-                                color: Colors.grey[400],
-                                fontSize: 18.0,
-                                letterSpacing: 1.0,
-                              ),
-                            )
+                            // Icon(
+                            //   Icons.inbox,
+                            //   color: Color.fromARGB(255, 60, 255, 236),
+                            // ),
+                            // SizedBox(width: 10.0),
+                            // Text(
+                            //   '$idPath',
+                            //   style: TextStyle(
+                            //     color: Colors.grey[400],
+                            //     fontSize: 18.0,
+                            //     letterSpacing: 1.0,
+                            //   ),
+                            // )
                           ],
                         ),
                       ],

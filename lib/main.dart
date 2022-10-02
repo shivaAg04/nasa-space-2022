@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nasa_space2022/bottom_navigation_bar.dart';
-import 'package:nasa_space2022/login_page.dart';
+import 'package:nasa_space2022/SCREENS/login_page.dart';
 import 'package:provider/provider.dart';
+import 'SCREENS/user_screen.dart';
 
 void main() {
   runApp(const MyApp());
