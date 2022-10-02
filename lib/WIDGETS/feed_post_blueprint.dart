@@ -33,11 +33,10 @@ class FeedBlueprint extends StatelessWidget {
                   bottom: 20,
                   right: 13,
                   child: Container(
-                    width: 250,
-                    color: Colors.black54,
+                    width: 200,
                     padding: EdgeInsets.all(12),
                     child: const Text(
-                      "title",
+                      "Title :ispsum laurem",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 27,
@@ -49,41 +48,41 @@ class FeedBlueprint extends StatelessWidget {
                 )
               ],
             ),
-            Padding(
-              padding: EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Row(
-                    children: [
-                      Icon(Icons.schedule),
-                      SizedBox(
-                        width: 6,
-                      ),
-                      Text('    min')
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Icon(Icons.work),
-                      SizedBox(
-                        width: 6,
-                      ),
-                      Text("complexityTest"),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Icon(Icons.attach_money),
-                      SizedBox(
-                        width: 6,
-                      ),
-                      Text("affordabilityTest"),
-                    ],
-                  ),
-                ],
-              ),
-            )
+            // Padding(
+            //   padding: EdgeInsets.all(20),
+            //   child: Row(
+            //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //     children: [
+            //       Row(
+            //         children: [
+            //           Icon(Icons.schedule),
+            //           SizedBox(
+            //             width: 6,
+            //           ),
+            //           Text('    min')
+            //         ],
+            //       ),
+            //       Row(
+            //         children: [
+            //           Icon(Icons.work),
+            //           SizedBox(
+            //             width: 6,
+            //           ),
+            //           Text("complexityTest"),
+            //         ],
+            //       ),
+            //       Row(
+            //         children: [
+            //           Icon(Icons.attach_money),
+            //           SizedBox(
+            //             width: 6,
+            //           ),
+            //           Text("affordabilityTest"),
+            //         ],
+            //       ),
+            //     ],
+            //   ),
+            // )
           ],
         ),
       ),

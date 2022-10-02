@@ -41,7 +41,7 @@ class _ConcentricTransitionState extends State<ConcentricTransition> {
         body: ConcentricPageView(
       duration: Duration(milliseconds: 600),
       onFinish: () {
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(
             builder: (BuildContext context) => LoginPage(),
