@@ -1,8 +1,8 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:nasa_space2022/events_screen.dart';
-import 'package:nasa_space2022/feed_screen.dart';
-import 'package:nasa_space2022/user_screen.dart';
+import 'package:nasa_space2022/SCREENS/events_screen.dart';
+import 'package:nasa_space2022/SCREENS/feed_screen.dart';
+import 'package:nasa_space2022/SCREENS/user_screen.dart';
 
 class CustomiseBottomNavigationBar extends StatefulWidget {
   const CustomiseBottomNavigationBar({Key? key}) : super(key: key);

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:lottie/lottie.dart';
-import 'package:nasa_space2022/user_screen.dart';
+import 'package:nasa_space2022/SCREENS/user_screen.dart';
+import 'package:nasa_space2022/SCREENS/welcome_screen.dart';
 import 'package:provider/provider.dart';
+
+import 'front_page.dart';
 
 class GoogleSignInController with ChangeNotifier {
   final _googleSignIn = GoogleSignIn();
@@ -58,12 +61,10 @@ class _LoginPageState extends State<LoginPage> {
         padding: EdgeInsets.only(left: 40, right: 40, top: 10, bottom: 10),
         child: Container(
           decoration: BoxDecoration(
-            border: Border.all(
-                width: 3.0
-            ),
+            border: Border.all(width: 3.0),
             borderRadius: BorderRadius.all(
                 Radius.circular(10.0) //                 <--- border radius here
-            ),
+                ),
           ),
           child: Row(
             children: [
@@ -71,7 +72,9 @@ class _LoginPageState extends State<LoginPage> {
                   height: 50,
                   width: 50,
                   child: Lottie.asset('assets/lottie/google-logo-effect.json')),
-              SizedBox(width: 10,),
+              SizedBox(
+                width: 10,
+              ),
               Text(
                 'Sign in with Google',
                 style: TextStyle(fontSize: 20),
@@ -106,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => User()),
+                MaterialPageRoute(builder: (context) => FrontPage()),
               );
             })
       ],

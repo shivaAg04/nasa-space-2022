@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nasa_space2022/feed_post_blueprint.dart';
+import 'package:nasa_space2022/WIDGETS/feed_post_blueprint.dart';
 
 class feed extends StatelessWidget {
   const feed({Key? key}) : super(key: key);

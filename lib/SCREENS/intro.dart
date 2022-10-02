@@ -1,7 +1,9 @@
 import 'package:concentric_transition/page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:nasa_space2022/welcome_screen.dart';
+import 'package:nasa_space2022/SCREENS/welcome_screen.dart';
+
+import 'login_page.dart';
 
 class ConcentricTransition extends StatefulWidget {
   const ConcentricTransition({Key? key}) : super(key: key);
@@ -42,7 +44,7 @@ class _ConcentricTransitionState extends State<ConcentricTransition> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (BuildContext context) => const welcomeScreen(),
+            builder: (BuildContext context) => LoginPage(),
           ),
         );
       },
