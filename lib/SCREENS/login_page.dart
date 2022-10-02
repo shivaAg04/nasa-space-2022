@@ -107,7 +107,7 @@ class _LoginPageState extends State<LoginPage> {
         ActionChip(
             label: Text('hy'),
             onPressed: () {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => FrontPage()),
               );
