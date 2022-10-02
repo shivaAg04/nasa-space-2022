@@ -209,7 +209,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   body: jsonBody,
                   encoding: encoding,
                 );
-                if (response.statusCode  == 201) {
+                if (response.statusCode == 201) {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => WelcomeScreen()),

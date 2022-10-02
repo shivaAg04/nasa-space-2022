@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'login_page.dart';
 
 class User extends StatelessWidget {
