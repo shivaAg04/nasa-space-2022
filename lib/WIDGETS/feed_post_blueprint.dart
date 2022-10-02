@@ -1,7 +1,32 @@
 import 'package:flutter/material.dart';
 
 class FeedBlueprint extends StatelessWidget {
-  const FeedBlueprint({Key? key}) : super(key: key);
+  late int iindex;
+  FeedBlueprint(this.iindex, {Key? key}) : super(key: key);
+  List<String> NASAIMAGE = [
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25551.jpg',
+    'https://www.nasa.gov/sites/default/files/thumbnails/image/curiosity_selfie.jpg',
+    'https://qtxasset.com/cdn-cgi/image/w=850,h=478,f=auto,fit=crop,g=0.5x0.5/https://qtxasset.com/quartz/qcloud4/media/image/fierceelectronics/1637693942/DART%20mission.jpg?VersionId=JyQv7cpw4VREJ6apEAP7yN28vNcub7JH'
+        'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA24908.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25329.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25411.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25531.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25408.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA24925.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25244.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA24925.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25551.jpg',
+    'https://www.nasa.gov/sites/default/files/thumbnails/image/curiosity_selfie.jpg',
+    'https://qtxasset.com/cdn-cgi/image/w=850,h=478,f=auto,fit=crop,g=0.5x0.5/https://qtxasset.com/quartz/qcloud4/media/image/fierceelectronics/1637693942/DART%20mission.jpg?VersionId=JyQv7cpw4VREJ6apEAP7yN28vNcub7JH'
+        'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA24908.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25329.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25411.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25531.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25408.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA24925.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA25244.jpg',
+    'https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA24925.jpg'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +48,10 @@ class FeedBlueprint extends StatelessWidget {
                     topRight: Radius.circular(15),
                   ),
                   child: Image.network(
-                    'https://qtxasset.com/cdn-cgi/image/w=850,h=478,f=auto,fit=crop,g=0.5x0.5/https://qtxasset.com/quartz/qcloud4/media/image/fierceelectronics/1637693942/DART%20mission.jpg?VersionId=JyQv7cpw4VREJ6apEAP7yN28vNcub7JH',
+                    NASAIMAGE[iindex],
                     height: 250,
                     width: double.infinity,
-                    fit: BoxFit.contain,
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Positioned(
