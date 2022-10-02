@@ -61,7 +61,7 @@ class FeedBlueprint extends StatelessWidget {
                     width: 200,
                     padding: EdgeInsets.all(12),
                     child: const Text(
-                      "Title :ispsum laurem",
+                      " ",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 27,
