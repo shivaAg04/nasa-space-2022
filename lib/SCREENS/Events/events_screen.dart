@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nasa_space2022/SCREENS/Events/add_new_event_screen.dart';
 
+import '../../WIDGETS/feed_post_blueprint.dart';
 import 'add_new_event_screen.dart';
 
 class EventsScreen extends StatelessWidget {
@@ -30,6 +31,12 @@ class EventsScreen extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
+      ),
+      body: ListView.builder(
+        itemBuilder: (ctx, index) {
+          return FeedBlueprint(index + 5);
+        },
+        itemCount: 10,
       ),
     );
   }

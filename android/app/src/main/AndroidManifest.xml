@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nasa_space2022">
+   <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="nasa_space2022"
         android:name="${applicationName}"

@@ -53,7 +53,7 @@ class _FrontPageState extends State<FrontPage> {
             inactiveColor: Color.fromARGB(255, 60, 255, 236),
             icon: Icon(Icons.message),
             title: const Text(
-              'Messages  ',
+              'My events  ',
             ),
             activeColor: Color.fromARGB(255, 78, 255, 90),
             textAlign: TextAlign.center,

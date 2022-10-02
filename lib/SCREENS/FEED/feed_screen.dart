@@ -18,7 +18,7 @@ class feed extends StatelessWidget {
       // ),
       body: ListView.builder(
         itemBuilder: (ctx, index) {
-          return FeedBlueprint();
+          return FeedBlueprint(index);
         },
         itemCount: 10,
       ),

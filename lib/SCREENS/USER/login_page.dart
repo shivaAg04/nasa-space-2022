@@ -112,52 +112,58 @@ class _LoginPageState extends State<LoginPage> {
         Text('You are logged in as\n'),
         Text(model.googleAccount!.displayName ?? ''),
         ActionChip(
-          label: Text('hy'),
-          onPressed: () async {
-            String email = model.googleAccount!.email ?? '';
-            String password = model.googleAccount!.email ?? '123456';
-            String firstName = model.googleAccount!.displayName ?? '';
-            String lastName = model.googleAccount!.displayName ?? '';
-            String userName = model.googleAccount!.id ?? '';
-            final uri = Uri.parse('$url').replace(queryParameters: {
-              'email': 'gt@gmail.com',
-            });
-
-            Map<String, String> confidentials = {
-              'username': userName,
-              'first_name': firstName,
-              'last_name': lastName,
-              'password': password,
-              'email': email
-            };
-            var response = await http.get(uri);
-            print(response.statusCode);
-            if (response.statusCode == 200) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => WelcomeScreen()),
-              );
-            } else {
-              final uri =
-                  Uri.parse('https://1d4b-125-21-249-98.ngrok.io/login/');
-              final headers = {'Content-Type': 'application/json'};
-              Map<String, String> body = confidentials;
-              String jsonBody = json.encode(body);
-              final encoding = Encoding.getByName('utf-8');
-
-              Response response = await post(
-                uri,
-                headers: headers,
-                body: jsonBody,
-                encoding: encoding,
-              );
-              print(response.statusCode);
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => RegisterScreen()),
-              );
-            }
+          label: Text('TAP'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => RegisterScreen()),
+            );
           },
+          // onPressed: () async {
+          //   String email = model.googleAccount!.email ?? '';
+          //   String password = model.googleAccount!.email ?? '123456';
+          //   String firstName = model.googleAccount!.displayName ?? '';
+          //   String lastName = model.googleAccount!.displayName ?? '';
+          //   String userName = model.googleAccount!.id ?? '';
+          //   final uri = Uri.parse('$url').replace(queryParameters: {
+          //     'email': 'gt@gmail.com',
+          //   });
+
+          //   Map<String, String> confidentials = {
+          //     'username': userName,
+          //     'first_name': firstName,
+          //     'last_name': lastName,
+          //     'password': password,
+          //     'email': email
+          //   };
+          //   var response = await http.get(uri);
+          //   print(response.statusCode);
+          //   if (response.statusCode == 200) {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => WelcomeScreen()),
+          //     );
+          //   } else {
+          //     final uri =
+          //         Uri.parse('https://1d4b-125-21-249-98.ngrok.io/login/');
+          //     final headers = {'Content-Type': 'application/json'};
+          //     Map<String, String> body = confidentials;
+          //     String jsonBody = json.encode(body);
+          //     final encoding = Encoding.getByName('utf-8');
+
+          //     Response response = await post(
+          //       uri,
+          //       headers: headers,
+          //       body: jsonBody,
+          //       encoding: encoding,
+          //     );
+          //     print(response.statusCode);
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => RegisterScreen()),
+          //     );
+          //   }
+          // },
         ),
       ],
     );

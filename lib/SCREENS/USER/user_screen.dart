@@ -21,14 +21,14 @@ class User extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        // Center(
-                        //   child: CircleAvatar(
-                        //     radius: 40.0,
-                        //     backgroundImage: Image.network(
-                        //             model.googleAccount!.photoUrl ?? 'w')
-                        //         .image,
-                        //   ),
-                        // ),
+                        Center(
+                          child: CircleAvatar(
+                            radius: 40.0,
+                            backgroundImage: Image.network(
+                                    model.googleAccount!.photoUrl ?? 'w')
+                                .image,
+                          ),
+                        ),
                         Divider(
                           color: Colors.grey[800],
                           height: 40.0,

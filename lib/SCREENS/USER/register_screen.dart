@@ -182,46 +182,53 @@ class _RegisterScreenState extends State<RegisterScreen> {
             ),
           ),
           ActionChip(
-              avatar: Icon(Icons.done),
-              label: Text(
-                'Submit',
-                style: TextStyle(fontSize: 20),
-              ),
-              onPressed: () async {
-                Map<String, String> data = {
-                  'picture': 'xyz',
-                  'email': 'ab@gmail.com',
-                  'institute': instituteInput.text,
-                  'specialization': specializationInput.text,
-                  'achievements': achievementInput.text,
-                  'about_me': about_me_Input.text,
-                  'social_link': socialLinkInput.text,
-                  'user_type': 'USER',
-                };
-                final uri =
-                    Uri.parse('https://1d4b-125-21-249-98.ngrok.io/profile/');
-                final headers = {'Content-Type': 'application/json'};
-                Map<String, String> body = data;
-                String jsonBody = json.encode(body);
-                final encoding = Encoding.getByName('utf-8');
+            avatar: Icon(Icons.done),
+            label: Text(
+              'Submit',
+              style: TextStyle(fontSize: 20),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FrontPage()),
+              );
+            },
+            // onPressed: () async {
+            //   Map<String, String> data = {
+            //     'picture': 'xyz',
+            //     'email': 'ab@gmail.com',
+            //     'institute': instituteInput.text,
+            //     'specialization': specializationInput.text,
+            //     'achievements': achievementInput.text,
+            //     'about_me': about_me_Input.text,
+            //     'social_link': socialLinkInput.text,
+            //     'user_type': 'USER',
+            //   };
+            //   final uri =
+            //       Uri.parse('https://1d4b-125-21-249-98.ngrok.io/profile/');
+            //   final headers = {'Content-Type': 'application/json'};
+            //   Map<String, String> body = data;
+            //   String jsonBody = json.encode(body);
+            //   final encoding = Encoding.getByName('utf-8');
 
-                Response response = await post(
-                  uri,
-                  headers: headers,
-                  body: jsonBody,
-                  encoding: encoding,
-                );
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => FrontPage()),
-                );
-                // if (response.statusCode == 201) {
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (context) => FrontPage()),
-                //   );
-                // }
-              })
+            //   Response response = await post(
+            //     uri,
+            //     headers: headers,
+            //     body: jsonBody,
+            //     encoding: encoding,
+            //   );
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => FrontPage()),
+            //   );
+            //   // if (response.statusCode == 201) {
+            //   //   Navigator.push(
+            //   //     context,
+            //   //     MaterialPageRoute(builder: (context) => FrontPage()),
+            //   //   );
+            //   // }
+            // }
+          )
         ],
       ),
     );
