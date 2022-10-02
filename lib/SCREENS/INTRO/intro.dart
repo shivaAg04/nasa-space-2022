@@ -32,7 +32,7 @@ class _ConcentricTransitionState extends State<ConcentricTransition> {
     "assets/lottie/space.json",
     "assets/lottie/astronaut.json"
   ];
-  List<String> introText = ["NASA APP", "DEMO TEXT", "DEMO TEXT"];
+  List<String> introText = ["NASA APP", " ", " "];
   List<Color> introTextColor = [Colors.pinkAccent, Colors.white, Colors.white];
 
   @override
